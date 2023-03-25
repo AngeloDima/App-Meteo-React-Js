@@ -1,0 +1,47 @@
+
+.container-meteo{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2020/10/27/08/00/mountains-5689938_960_720.png');
+    background-size: cover;
+    position: relative;
+}
+
+.input{
+
+}
+
+
+.temperatura{
+
+}
+
+
+.DescMeteo{
+
+}
+
+
+.windSpeed{
+
+}
+
+
+.umidità{
+
+}
+
+
+.downView{
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    /* From https://css.glass */
+    /* border-radius: 16px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+}

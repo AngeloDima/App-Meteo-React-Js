@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import './meteo.css'
+
 
 function Meteo() {
 
@@ -6,7 +8,7 @@ function Meteo() {
   const [temperature, setTemperature] = useState('');
   const [weatherDescription, setWeatherDescription] = useState('');
   const [windSpeed, setWindSpeed] = useState('');
-  const [pressure, setPressure] = useState('');
+  const [humidity, setHumidity] = useState('');
   const [city, setCity] = useState('');
 
   // definizione dell'URL dell'API
@@ -22,7 +24,7 @@ function Meteo() {
         setTemperature(data.main.temp);
         setWeatherDescription(data.weather[0].description);
         setWindSpeed(data.wind.speed);
-        setPressure(data.main.pressure);
+        setHumidity(data.main.humidity);
 
         // visualizzazione dell'oggetto JSON sulla console del browser
         console.log(data);
@@ -35,16 +37,51 @@ function Meteo() {
     setCity(event.target.value);
   };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // stampa dei valori delle variabili di stato nel return del componente
   return (
-    <div>
-      <input type="text" value={city} onChange={handleCityChange} />
-      {temperature > 1 && 
-        <p>Temperature: {Math.floor(temperature - 273.15)}</p>
+    <div className='container-meteo'>
+
+
+
+      <input className='input' type="text" value={city} onChange={handleCityChange} />
+
+     <div className='downView'>
+     {temperature > 1 && 
+        <p className='temperatura' >Temperature: {Math.floor(temperature - 273.15)}</p>
       }
-      <p>Weather Description: {weatherDescription}</p>
-      <p>Wind Speed: {windSpeed} Km/h</p>
-      <p>Pressure: {pressure}</p>
+
+
+
+      <p className='DescMeteo' >Weather Description: {weatherDescription}</p>
+
+
+
+      <p className='windSpeed' >Wind Speed: {windSpeed} Km/h</p>
+
+
+
+      <p className='umidità' >humidity: {humidity}</p>
+     </div>
+      
+
+
+
     </div>
   );
 }
