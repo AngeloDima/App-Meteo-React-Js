@@ -84,7 +84,7 @@ function Meteo() {
      <div className='downView'>
 
      {temperature > 1 && 
-        <p className='temperatura' >Temperatura: {Math.floor(temperature - 273.15)}</p>
+        <p className='temperatura' >Temperatura: {Math.floor(temperature - 273.15)} C</p>
       }
 
 
@@ -97,7 +97,8 @@ function Meteo() {
 
 
 
-      <p className='umidità' >Umidità: {humidity}</p>
+      <p className='umidità' >Umidità: {humidity} %</p>
+      
 
      </div>
       {/* END-DOWN */}
