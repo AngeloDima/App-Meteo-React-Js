@@ -13,7 +13,9 @@
     border: none;
 }
 
-
+.input:focus{
+    outline: none;
+}
 
 
 .UP{
