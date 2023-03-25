@@ -1,5 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import './meteo.css'
+import { Helmet } from "react-helmet";
+
+
+<Helmet>
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+    rel="stylesheet"
+  />
+</Helmet>
 
 
 function Meteo() {
@@ -58,27 +76,31 @@ function Meteo() {
     <div className='container-meteo'>
 
 
-
+    <div className='UP' >
       <input className='input' type="text" value={city} onChange={handleCityChange} />
+    </div>
 
+    {/* DOWN */}
      <div className='downView'>
+
      {temperature > 1 && 
-        <p className='temperatura' >Temperature: {Math.floor(temperature - 273.15)}</p>
+        <p className='temperatura' >Temperatura: {Math.floor(temperature - 273.15)}</p>
       }
 
 
 
-      <p className='DescMeteo' >Weather Description: {weatherDescription}</p>
+      <p className='DescMeteo' >Descrizione meteo: {weatherDescription}</p>
 
 
 
-      <p className='windSpeed' >Wind Speed: {windSpeed} Km/h</p>
+      <p className='windSpeed' >Velocità vento: {windSpeed} Km/h</p>
 
 
 
-      <p className='umidità' >humidity: {humidity}</p>
+      <p className='umidità' >Umidità: {humidity}</p>
+
      </div>
-      
+      {/* END-DOWN */}
 
 
 
